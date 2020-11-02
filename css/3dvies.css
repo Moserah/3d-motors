@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+:root {
+    --primaryColor:#F20505;
+    --mainWhite: #fff;
+    --mainBlack: rgb(2, 15, 17);
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body {
+    color: var(--mainWhite);
+    background: var(--mainBlack);
+    font-family: "Lato", sans-serif;
+}
+
+/* --------------- Navbar ---------------- */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;    
+    z-index: 1;
+}
+.navbar.active{
+ background: rgb(231, 226, 221);
+}
+.navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.logo h1 span{
+  color: var(--primaryColor);
+}
+.nav-icon {
+  font-size: 1.5rem;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.navbar.active .nav-icon,.navbar.active .logo h1{
+  color: var(--mainBlack);
+}
+.cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+}
+
+/* --------------- End of Navbar ---------------- */

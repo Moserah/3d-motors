@@ -1,0 +1,581 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
+:root {
+    --primaryColor:#FF9E3A;
+    --mainWhite: #fff;
+    --mainBlack: #2684BA;
+    --mainGrey: #ececec;
+    --mainSpacing: 1.5px;
+    --mainTransition: all 0.3s linear;
+    --mainOblack: #010010;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body {
+    background: #F2F2F2;
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+}
+.landing{
+  background: linear-gradient(180deg, #2684BA,#1C4072);
+}
+/* --------------- Navbar ---------------- */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;    
+    z-index: 1;
+}
+.navbar.active{
+ background: var(--mainWhite);
+ position: fixed;
+}
+.navbar-center {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.logo h1{
+  font-size: clamp(20px, 5vw, 30px);
+}
+.logo h1 span{
+  color: var(--primaryColor);
+}
+.nav-icon {
+  color: var(--mainWhite);
+  font-size: clamp(20px, 5vw, 20px);
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.navbar.active .nav-icon,.navbar.active .logo h1{
+  color: var(--mainBlack);
+}
+.cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+}
+.reg{
+  display: flex;
+}
+.login,.signup{
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 18px;
+}
+ul li{
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 10px;
+}
+ul li a{
+  color: var(--mainWhite);
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.navbar.active ul li a{
+  color: var(--mainOblack);
+}
+@media screen and (max-width:768px){
+  ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 300px;
+    height: 100vh;
+    background: var(--mainWhite);
+    transition: var(--mainTransition);
+    transform: translateX(-300px);
+  }
+  ul li a{
+    color: var(--mainOblack);
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+/* --------------- End of Navbar ---------------- */
+
+/* --------------- Hero ---------------- */
+
+.hero {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner {
+  /* width: 500px; */
+    display: inline-block;
+    padding: 10px;
+    /* margin: 0 30px; */
+}
+.showcase3d{
+  position: relative;
+  width: 100%;
+    /* margin: 0 30px; */
+    height: 400px;
+    border: 1px solid var(--mainOblack);
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+.banner-title {
+    font-size: clamp(20px, 6vw, 60px);
+    font-weight: 300;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+    color: var(--mainWhite);
+}
+.banner-btn {
+    padding: 17px 20px ;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: var(--primaryColor);
+    border: none;
+    outline: none;
+    transition: .2s;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 30px;
+}
+.login{
+  background: var(--primaryColor);
+}
+.banner-btn:nth-child(2),.signup{
+  background: #1CAAD9;
+}
+.banner-btn a,.login,.signup{    
+    color: var(--mainWhite);
+}
+.banner-btn:hover,.login:hover,.signup:hover{
+    box-shadow: 5px 0 5px rgba(0,0,0,.5),
+              0px 5px 5px rgba(0,0,0,.2);
+}
+.banner-btn:active,.login:active,.signup:active{
+  box-shadow: inset 5px 0 5px rgba(0,0,0,.5),
+                inset 0px 5px 5px rgba(255,255,255,.5);
+}
+
+/* --------------- End of Hero ---------------- */
+
+/* --------------- Products ---------------- */
+
+.products {
+    padding: 4rem 0;
+}
+.section-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    color: var(--mainOblack);
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+.products-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+}
+.img-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.bag-btn {
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(101%);
+    cursor: pointer;
+}
+.bag-btn:hover {
+    color: var(--mainWhite);
+}
+.fa-shopping-cart {
+    margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn {
+    transform: translateX(0);
+}
+.product-img {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    transition: var(--mainTransition);
+}
+.img-container:hover .product-img {
+    opacity: 0.5;
+}
+.product{
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+.product h3 {
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-top: 1rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+    color: #7a7a7a;
+}
+.product h4 {
+    margin-top: 0.7rem;
+    letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor);
+    text-align: center;
+}
+.view{
+  text-align: center;
+  padding: 10px 0;
+}
+.view button{
+  padding: 7px 20px;
+  background: none;
+  border: 1px solid var(--primaryColor);
+  transition: .5s;
+  border-radius: 30px;
+}
+.view a{
+  color: var(--primaryColor);
+}
+.view button:hover{
+  background: var(--primaryColor);
+}
+.view button:hover a{
+  color: var(--mainWhite);
+}
+/* ---------------End of Products ---------------- */
+/* --------------- Cart ---------------- */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: rgba(255, 156, 58, 0.726);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: rgb(231, 226, 221);
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+  color: var(--mainOblack);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.clear-cart{
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: clamp(15px, 5vw, 18px);
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  background: var(--primaryColor);
+  border: none;
+  color: var(--mainWhite);
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+}
+/*---------- Cart Item -------------------- */
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.cart-item h5 {
+  margin: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+}
+.item-amount {
+  text-align: center;
+}
+.remove-item {
+  color: grey;
+  cursor: pointer;
+}
+.fa-plus,
+.fa-minus {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+/*---------- End of Cart Item -------------------- */
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+/* --------------- End of Cart ---------------- */
+
+/* ---------------- Login / signup---------------------- */
+.card,.Signup-card{
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+  box-shadow: -5px 0 10px rgba(0,0,0,.5),
+              0 -5px 10px rgba(255,255,255,.3);
+  padding: 50px 35px;
+}
+.Signup-card{
+  width: 700px;
+  height: 500px;
+  text-align: center;
+}
+.card h2,.Signup-card h2{
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  font-size: clamp(20px, 5vw, 30px);
+}
+.Signup-card h2{
+  font-size: clamp(20px, 5vw, 35px);
+}
+.formBox{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.w100{
+  width: 100%;
+}
+.w75{
+  width: 75%;
+}
+.w50{
+  width: 47%;
+}
+.inputBox{
+  position: relative;
+  margin: 0 0 35px 0;
+  box-shadow: inset -5px 0 5px rgba(0,0,0,.2),
+              inset 0 -5px 5px rgba(255,255,255,.2);
+  border-radius: 30px;
+  height: 45px;
+}
+.Signup-card .inputBox:nth-child(3){
+  box-shadow: inset -5px 0 5px rgba(0,0,0,.2),
+              inset 0 -5px 5px rgba(255,255,255,.2);
+}
+.Signup-card .inputBox:nth-child(3):active{
+  box-shadow: inset -5px 0 5px rgba(0,0,0,.2),
+              inset 0 -5px 5px rgba(255,255,255,.2);
+}
+.inputBox:nth-child(3),.Signup-card .inputBox:nth-child(7){
+  cursor: pointer;
+  box-shadow: -5px 0 5px rgba(0,0,0,.2),
+              0 -5px 5px rgba(255,255,255,.2);
+}
+.inputBox:nth-child(3):active,.Signup-card .inputBox:nth-child(7):active{
+  box-shadow: -2px 0 5px rgba(0,0,0,.2),
+              0 -2px 1px rgba(255,255,255,.2);
+}
+input[type="submit"]{
+  cursor: pointer;
+  font-weight: lighter;
+}
+.inputBox input{
+  width: 100% ;
+  padding: 10px;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 300;
+  color: var(--mainWhite);
+  border: none;
+  background: none;
+  outline: none;
+}
+.inputBox span{
+  position: absolute;
+  left: 10px;
+  padding: 10px 0;
+  font-weight: 300;
+  color: var(--mainWhite);
+  font-size: clamp(15px, 2vw, 17px);
+  transition: .5s;
+  pointer-events: none;
+}
+.inputBox input:focus ~ span, .inputBox input:valid ~ span{
+  transform: translateY(-22px);
+  font-size: 15px;
+  font-weight: 400;
+}
+.card p{
+  font-size: 15px;
+  font-weight: 400;
+}
+.card p a, .Signup-card p a{
+  color: var(--primaryColor);
+}
+/* --------------- End of login/signup --------------- */
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(15, 97, 145);
+}
+
+/* 3dviews css */
+.back{
+  padding: 30px;
+}
+.back a{
+  color: var(--mainOblack);
+}
+.projection{
+  display: grid;
+  padding: 50px;
+  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 20px;
+  grid-template-rows: 80vh;
+}
+.projection aside{
+  width: 380px;
+  border: 1px solid #000;
+  padding: 30px;
+}
+.projection section{
+  width: 100%;
+  border: 1px solid #000;
+}
+.projection section iframe{
+  width: 100%;
+  height: 100%;
+}
+.projection aside h1{
+  font-size: clamp( 18px, 5vw, 30px);
+  border-bottom: 1px solid #888;
+  margin-bottom: 5px;
+}
+.projection h2{
+  padding: 10px 0;
+  font-size: clamp(15px, 5vw, 19px);
+  border-bottom: 1px solid #888;
+  margin-bottom: 20px;
+}
+.projection h3{
+  text-transform: capitalize;
+  border-bottom: 1px solid #888;
+  margin-bottom: 20px;
+}
+.color{
+  font-size: clamp(15px, 5vw, 20px);
+  font-weight: bold;
+  text-transform: capitalize;
+  border-bottom: 1px solid #888;
+  margin-bottom: 20px;
+}
+.color span{
+  width: 40px;
+  height: 40px;
+  background:  #FF9E3A;
+}
+.projection .bag-btn {
+  position: relative;
+  background: var(--primaryColor);
+  border: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(0);
+  cursor: pointer;
+}
+.scene
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--mainOblack);
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}

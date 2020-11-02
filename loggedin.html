@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- document css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="landing">
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="navbar-center">
+                <div class="logo">
+                    <h1>3D <span>WHEELS</span></h1>
+                </div>                
+                <div class="notification-btn">
+                    <span class="nav-icon">
+                        <i class="fas fa-bell"></i>
+                    </span>
+                </div>
+                <div class="cart-btn">
+                    <span class="nav-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </span>
+                    <div class="cart-items">0</div>
+                </div>
+                <form class="reg" action="./index.html">
+                    <button type="submit" class="login">Logout</button>
+                </form>
+            </div>
+        </nav>
+        <!-- end of navbar -->
+        <!-- hero -->
+        <header class="hero">
+            <div class="banner">
+                <h1 class="banner-title">The best 3D-car model vendor on the web</h1>
+                <button class="banner-btn"><a href="#products">View Models</a> </button>
+                <button class="banner-btn"><a href="#products">See plans</a></button>
+            </div>
+            <div class="showcase3d">
+                <iframe title="A 3D model"
+                    src="https://sketchfab.com/models/a81b9cede1444a6e951323c34abbde83/embed?autospin=0.2&amp;autostart=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1"
+                    frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true"
+                    webkitallowfullscreen="true"></iframe>
+            </div>
+        </header>
+        <!-- end of hero -->
+    </div>
+    <!-- products -->
+    <section class="products" id="products">
+        <div class="section-title">
+            <h2>our products</h2>
+        </div>
+        <div class="products-center">
+
+        </div>
+    </section>
+    <!-- end of products -->
+    <!-- cart -->
+    <div class="cart-overlay"></div>
+    <div class="cart">
+        <span class="close-cart"><i class="fas fa-window-close"></i></span>
+        <h2>your cart</h2>
+        <div class="cart-content">
+
+        </div>
+        <div class="cart-footer">
+            <h3>your total : $<span class="cart-total">0</span></h3>
+            <button class="clear-cart banner-btn">clear cart</button>
+            <button class="checkout-cart banner-btn">Checkout</button>
+        </div>
+    </div>
+    <!-- end of cart -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- document css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="landing">
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="navbar-center">
+                <div class="logo">
+                    <h1>3D <span>WHEELS</span></h1>
+                </div>
+                <div class="cart-btn">
+                    <span class="nav-icon">
+                        <i class="fas fa-cart-plus"></i>
+                    </span>
+                    <div class="cart-items">0</div>
+                </div>
+                <form class="reg" action="./login.html">
+                    <button type="submit" class="login">Login</button>
+                </form>
+            </div>
+        </nav>
+        <!-- end of navbar -->
+        <!-- hero -->
+        <header class="hero">
+            <form class="Signup-card" action="./loggedin.html">
+                <h2>Sign Up</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="password" required>
+                        <span>Password</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="password" required>
+                        <span>Confirm Password</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+                <p>Already have an account ?  <a href="./login.html">Login</a></p>
+            </form>       
+        </header>
+        <!-- end of hero -->
+        <!-- cart -->
+        <div class="cart-overlay"></div>
+        <div class="cart">
+            <span class="close-cart"><i class="fas fa-window-close"></i></span>
+            <h2>your cart</h2>
+            <div class="cart-content">
+
+            </div>
+            <div class="cart-footer">
+                <h3>your total : $<span class="cart-total">0</span></h3>
+                <button class="clear-cart">clear cart</button>
+                <!-- <button class="checkout-cart banner-btn">Checkout</button> -->
+            </div>
+        </div>
+        <!-- end of cart -->
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
